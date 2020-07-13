@@ -3,11 +3,24 @@ import Header from '../../organisms/Header';
 import Footer from '../../organisms/Footer';
 import { Container, Main } from './styles';
 
-const Jobs = () => {
+type Job = {
+  id: string;
+  title: string;
+}
+
+type Data = {
+  data?: Job[];
+}
+
+const Jobs = ({ data }:Data) => {
   return (
     <Container>
       <Header />
-      <Main />
+      <Main>
+        <ul>
+          {data?.map(job => <li key={job.id}>{job.title}</li>)}
+        </ul>
+      </Main>
       <Footer />
     </Container>
   )
