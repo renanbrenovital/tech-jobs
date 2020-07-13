@@ -1,18 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Switch } from './styles';
+import AppContext from '../../../context/themeContext';
 
 const ThemeSwitcher = () => {
-  const [theme, setTheme] = useState('light');
-  
-  const toogle = () => {
-    setTheme(value => value === 'light' ? 'dark' : 'light');
-  }
-  
   return (
-    <Switch>
-      <input id="switch" className="switch" type="checkbox" onClick={toogle} />
-  <label htmlFor="switch">{theme}</label>
-    </Switch>
+    <AppContext.Consumer>
+      {value => (
+        <Switch>
+          <input id="switch" className="switch" type="checkbox" onChange={() => value.toggle()} checked={value.theme === 'dark'} />
+          <label htmlFor="switch"></label>
+        </Switch>
+      )
+      }
+    </AppContext.Consumer>
   );
 };
 

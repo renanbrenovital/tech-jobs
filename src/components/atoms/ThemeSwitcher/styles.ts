@@ -51,6 +51,6 @@ export const Switch = styled.div`
 
   .switch:checked + label:after {
     margin-left: 28px;
-    background-color: ${props => props.theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.primary};
   }
 `;
