@@ -14,6 +14,11 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   background: ${({ theme }) => theme.card.background};
+  transition: all .2s ease-in-out;
+
+  :hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const Content = styled.div`
