@@ -5,14 +5,18 @@ import api from '../../services/api';
 const Home = () => {
   const [loading, setLoading] = useState(false);
   const [jobs, setJobs] = useState([]);
-
+  
   const query = `{
     jobs {
-      id,
+      slug,
       title,
       tags {
         name
       },
+      company {
+        name,
+        slug
+      }
     }
   }`;
 

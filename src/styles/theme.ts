@@ -18,6 +18,9 @@ export const lightTheme = {
     hover: {
       background: '#02010030',
     }
+  },
+  pagination: {
+    background: '#FFFFFF95',
   }
 }
 
@@ -41,5 +44,8 @@ export const darkTheme = {
     hover: {
       background: '#70CB7630',
     }
+  },
+  pagination: {
+    background: '#02010A95',
   }
 }

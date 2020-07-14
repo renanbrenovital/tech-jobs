@@ -15,9 +15,12 @@ const Job = ({ data }: DataJob) => {
       <Card>
         <Image src={`https://picsum.photos/500/300/?image=${index+1}`} />
         <Content>
-          <Title level={2}>{job.title}</Title>
-          <Text>{job.tags.map(tag => tag.name).join(', ')}</Text>
-          <Button>Read More</Button>
+          <div>
+            <Title level={2}>{job.title}</Title>
+            <Text><small>Company: {job.company.name}</small></Text>
+          </div>
+          {/* <Text>{job.tags.map(tag => tag.name).join(', ')}</Text> */}
+          <Button onClick={() => {}}>Read More</Button>
         </Content>
       </Card>
     </Container>

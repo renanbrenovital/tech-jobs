@@ -11,6 +11,9 @@ interface Job {
   id: string;
   title: string;
   tags: TagItem[];
+  company: {
+    name: string;
+  }
 }
 
 export type Image = {
@@ -44,3 +47,8 @@ export type DataJob = {
 export type Children = {
   children: any;
 }
+
+export type TypeButton = {
+  children: any;
+  onClick: Function;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;

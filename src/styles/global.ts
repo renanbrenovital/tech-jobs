@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
-  
+export default createGlobalStyle`  
   *,
   *::after,
   *::before {

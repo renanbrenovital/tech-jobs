@@ -7,7 +7,7 @@ import Footer from '../../organisms/Footer';
 import { DataJobs } from '../../../types/types';
 import Jobs from '../../organisms/Jobs';
 
-const JobsTemplate = ({ data }: DataJobs) => {
+const JobsTemplate = ({ data }: DataJobs) => {  
   return (
     <>
       <Header />
