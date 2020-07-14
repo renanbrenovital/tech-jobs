@@ -1,10 +1,5 @@
 import React from 'react';
+import { Author } from '../../../types/types';
+import { Link } from './styles';
 
-interface Props {
-  url: string;
-  name: string;
-}
-
-const Author = (props: Props) => <a href={props.url} target="blank">{props.name}</a>;
-
-export default Author;
+export default ({ url, name }: Author) => <Link href={url} target="blank">{name}</Link>;

@@ -1,10 +1,9 @@
 import React from 'react';
-import { H1 } from './styles';
+import { H1, H2 } from './styles';
 
 type Props = {
+  level: number;
   children: string;
 }
 
-const Title = (props: Props) => <H1>{props.children}</H1>;
-
-export default Title;
+export default (props: Props) => props.level === 1 ? <H1>{props.children}</H1> : <H2>{props.children}</H2>;

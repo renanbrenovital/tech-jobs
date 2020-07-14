@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './styles/theme';
 import GlobalStyles from './styles/global';
@@ -6,16 +6,10 @@ import Home from './pages/Home';
 import AppContext from './context/themeContext';
 
 const App = () => {
-  const [theme, setTheme] = useState('light');
-
-  useEffect(() => {
-    const mode = localStorage.getItem('theme');
-    if(mode){
-      setTheme(mode);
-    }
-  }, []);
+  const initialTheme = localStorage.getItem('theme') || 'light';
+  const [theme, setTheme] = useState(initialTheme);
   
-  const toggle = () => {
+  const toggle = useCallback(() => {
     if(theme === 'light') {
       localStorage.setItem('theme', 'dark');      
       setTheme('dark');
@@ -24,7 +18,7 @@ const App = () => {
       localStorage.setItem('theme', 'light');      
       setTheme('light');
     }
-  } 
+  }, [theme]);
   
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>

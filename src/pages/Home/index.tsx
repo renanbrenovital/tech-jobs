@@ -1,28 +1,52 @@
 import React, { useEffect, useState } from 'react';
-import Jobs from '../../components/templates/Jobs';
-import qraphql_api from '../../services/api';
+import TemplateJobs from '../../components/templates/TemplateJobs';
+import api from '../../services/api';
 
 const Home = () => {
-  const [data, setData] = useState([]);
-
-  const query = `{
-    jobs {
-      id,
-      title,
+  const [loading, setLoading] = useState(false);
+  const [jobs, setJobs] = useState([
+    {
+      id: '09a098df9a8',
+      title: 'Frontend UX & UI',
+      tags: [
+        { name: 'React JS' },
+        { name: 'React Native' },
+        { name: 'Javascript' },
+        { name: 'UX' },
+        { name: 'UI' },
+        { name: 'Flexbox' },
+        { name: 'Grid' },
+        { name: 'SASS' },
+        { name: 'Figma' },
+        { name: 'Git' },
+        { name: 'GitHub' },
+      ],
     }
-  }`;
+  ]);
 
-  useEffect(() => {
-    qraphql_api('https://api.graphql.jobs/', query)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function({ data }) {
-      setData(data.jobs);
-    });
-  }, [query]);
+  // const query = `{
+  //   jobs {
+  //     id,
+  //     title,
+  //     tags {
+  //       name
+  //     },
+  //   }
+  // }`;
 
-  return <Jobs data={data} />;
+  // useEffect(() => {
+  //   const graphqlQuery = async () => {
+  //     setLoading(true);
+  //     const response = await api('https://api.graphql.jobs/', query);
+  //     const { data } = await response.json();
+  //     setJobs(data.jobs);
+  //     setLoading(false);
+  //   } 
+
+  //   graphqlQuery();
+  // }, [query]);
+
+  return <TemplateJobs data={{jobs, loading}} />;
 };
 
 export default Home;

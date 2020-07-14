@@ -1,9 +1,10 @@
 import React from 'react';
 import Author from '../../atoms/Author';
+import { Text } from './styles';
 
 const Copyright = () => {
   return (
-    <p>Created by <Author url="https://github.com/renanbrenovital" name="Renan Vital" /></p>
+    <Text>Created by <Author url="https://github.com/renanbrenovital" name="Renan Vital" /></Text>
   );
 }
 
