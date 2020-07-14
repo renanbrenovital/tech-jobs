@@ -1,8 +1,10 @@
 import React from 'react';
+
 import Image from '../../../components/atoms/Image';
 import Title from '../../../components/atoms/Title';
 import Text from '../../../components/atoms/Text';
 import Button from '../../../components/atoms/Button';
+
 import { Container, Card, Content } from './styles';
 import { DataJob } from '../../../types/types';
 

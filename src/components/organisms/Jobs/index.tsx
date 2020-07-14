@@ -1,6 +1,8 @@
 import React from 'react';
+
 import Loader from '../../atoms/Loader';
 import Job from '../../molecules/Job';
+
 import { List } from './styles';
 import { DataJobs } from '../../../types/types';
 

@@ -6,7 +6,7 @@ export const Main = styled.main`
   height: 80vh;
   padding: 3vw;
   overflow-x: auto;
-  background-color: ${({ theme }) => theme.colors.background }
+  background-color: ${({ theme }) => theme.colors.background };
 `;
 
 export const List = styled.ul`

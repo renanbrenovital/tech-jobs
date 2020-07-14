@@ -17,6 +17,16 @@ export type Image = {
   src: string;
 }
 
+export type Heading = {
+  level: number;
+  children: string;
+}
+
+export type ThemeState = {
+  theme: string;
+  toggle: Function;
+};
+
 export type DataJobs = { 
   data: { 
     jobs: Job[]; 

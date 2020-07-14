@@ -14,6 +14,7 @@ export default createGlobalStyle`
     padding: 0;
     outline: 0;
     font-family: 'Quicksand', sans-serif;
+    font-size: 62.5%;
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0;

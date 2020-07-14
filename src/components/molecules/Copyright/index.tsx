@@ -1,6 +1,6 @@
 import React from 'react';
 import Author from '../../atoms/Author';
-import { Text } from './styles';
+import Text from '../../atoms/Text';
 
 const Copyright = () => {
   return (

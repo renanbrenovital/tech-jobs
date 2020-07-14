@@ -7,7 +7,7 @@ import Footer from '../../organisms/Footer';
 import { DataJobs } from '../../../types/types';
 import Jobs from '../../organisms/Jobs';
 
-const TemplateJobs = ({ data }: DataJobs) => {
+const JobsTemplate = ({ data }: DataJobs) => {
   return (
     <>
       <Header />
@@ -19,4 +19,4 @@ const TemplateJobs = ({ data }: DataJobs) => {
   )
 };
 
-export default TemplateJobs;
+export default JobsTemplate;

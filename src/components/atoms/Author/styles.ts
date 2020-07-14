@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Link = styled.a`
-  color: ${({ theme }) => theme.colors.title};
+  color: ${({ theme }) => theme.card.text};
   font-weight: bold;
   text-decoration: none;
 

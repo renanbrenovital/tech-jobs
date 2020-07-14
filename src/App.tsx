@@ -1,24 +1,16 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
+import { useTheme } from './hooks/useTheme';
+
+import GlobalStyles from './styles/global';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './styles/theme';
-import GlobalStyles from './styles/global';
+
 import Home from './pages/Home';
 import AppContext from './context/themeContext';
+import { ThemeState } from './types/types';
 
-const App = () => {
-  const initialTheme = localStorage.getItem('theme') || 'light';
-  const [theme, setTheme] = useState(initialTheme);
-  
-  const toggle = useCallback(() => {
-    if(theme === 'light') {
-      localStorage.setItem('theme', 'dark');      
-      setTheme('dark');
-    }
-    else {
-      localStorage.setItem('theme', 'light');      
-      setTheme('light');
-    }
-  }, [theme]);
+const App = () => {  
+  const { theme, toggle }:ThemeState = useTheme();
   
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>

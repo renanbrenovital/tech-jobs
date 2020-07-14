@@ -1,11 +1,7 @@
 import { createContext } from 'react';
+import { ThemeState } from '../types/types';
 
-type TypeState = {
-  theme: string;
-  toggle: Function;
-};
-
-const AppContext = createContext<TypeState>({
+const AppContext = createContext<ThemeState>({
   theme: 'light',
   toggle: () => {}
 });
