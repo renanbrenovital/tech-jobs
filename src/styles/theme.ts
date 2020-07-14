@@ -1,10 +1,10 @@
 export const lightTheme = {
   colors: {
-    text: '#333',
+    text: '#222',
     title: '#FFF',
-    primary: '#70CB76',
-    secondary: '#72D5B4',
-    background: '#F2F2F2'
+    primary: '#72D5B4',
+    background: '#F2F2F2',
+    loader: '#020100',
   },
   card: {
     title: '#02010A',
@@ -26,8 +26,8 @@ export const darkTheme = {
     title: '#FFF',
     text: '#DDD',
     primary: '#02010A',
-    secondary: '#72D5B4',
-    background: '#020100'
+    background: '#020100',
+    loader: '#FFF'
   },
   card: {
     title: '#72D5B4',

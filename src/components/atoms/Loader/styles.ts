@@ -7,5 +7,5 @@ export const Svg = styled.svg`
 `;
 
 export const Path = styled.path.attrs(props => ({
-  fill: props.theme.colors.secondary,
+  fill: props.theme.colors.loader,
 }))``;
