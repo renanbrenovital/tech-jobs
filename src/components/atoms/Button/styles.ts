@@ -1,20 +1,23 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  color: #ffffff;
+  color: ${({ theme }) => theme.button.text};
   padding: 0.8rem;
-  font-size: 14px;
+  font-size: 0.8rem;
   text-transform: uppercase;
   border-radius: 4px;
-  font-weight: 400;
+  font-weight: bold;
   display: block;
   width: 100%;
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid ${({ theme }) => theme.button.border};  
+  /* background-color: ${({ theme }) => theme.button.background}; */
   background: transparent;
   outline:0;
   
   &:hover {
-    background-color: rgba(255, 255, 255, 0.12);
+    /* color: ${({ theme }) => theme.button.hover.text};
+    border: 1px solid ${({ theme }) => theme.button.hover.border}; */
+    background-color: ${({ theme }) => theme.button.hover.background};
   }  
 `;

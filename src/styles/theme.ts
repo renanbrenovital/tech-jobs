@@ -11,6 +11,13 @@ export const lightTheme = {
     text: '#020100',
     shadow: 'rgba(0, 0, 0, 0.3)', 
     background: 'linear-gradient(to bottom left, #FFF 40%, #DDD 100%)'
+  },
+  button: {
+    border: '#020100',
+    text: '#020100',
+    hover: {
+      background: '#02010030',
+    }
   }
 }
 
@@ -27,5 +34,12 @@ export const darkTheme = {
     text: '#F2F2F2',
     shadow: 'rgba(255, 255, 255, 0.1)', 
     background: 'linear-gradient(to bottom left, #020100 40%, #02010A 100%)'
+  },
+  button: {
+    border: '#72D5B4',
+    text: '#72D5B4',
+    hover: {
+      background: '#70CB7630',
+    }
   }
 }
