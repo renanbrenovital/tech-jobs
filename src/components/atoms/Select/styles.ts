@@ -11,8 +11,8 @@ export const Select = styled.select`
   border: 1px solid ${({ theme }) => theme.button.border};  
   background: transparent;
   outline:0;
-  width: 4vw;
-  height: 2vw;
+  width: 7vh;
+  height: 5vh;
   
   &:hover {
     background-color: ${({ theme }) => theme.button.hover.background};

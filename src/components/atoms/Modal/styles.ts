@@ -12,6 +12,18 @@ export const Modal = styled.div`
   height: 100vh;
   background-color: ${({ theme }) => theme.colors.primary};
 
+  &.fade-in {
+    opacity: 1;
+    transition: opacity linear 0.5s;
+    visibility: visible;
+  }
+
+  &.fade-out {
+    opacity: 0;
+    transition: opacity linear 0.5s;
+    visibility: hidden;
+  }
+
   > button {
     position: absolute;
     top: 5vw;
