@@ -4,16 +4,22 @@ export const Container = styled.div`
   width: 100vw;
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 export const List = styled.ul`
   margin: 0;
+  width: 90%;
   padding: 3vw 3vw 5vw 3vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   list-style: none;
   overflow-x: hidden;
+
+  > li {
+    margin-left: 3vw;
+  }
 
   ::-webkit-scrollbar {
     display: none;

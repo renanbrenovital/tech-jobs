@@ -14,13 +14,13 @@ export const Modal = styled.div`
 
   &.fade-in {
     opacity: 1;
-    transition: opacity linear 0.5s;
+    transition: opacity linear 0.3s;
     visibility: visible;
   }
 
   &.fade-out {
     opacity: 0;
-    transition: opacity linear 0.5s;
+    transition: opacity linear 0.3s;
     visibility: hidden;
   }
 

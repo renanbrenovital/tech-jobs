@@ -2,13 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.li`
   display: flex;
-  width: 220px;
-  background-color: ${props => (props.value && 'blue')};
-
-  @media(max-width: 400px) {
-    width: 80vw;
-    margin: 3vh 0;
-  }
+  justify-content: center;
+  width: 100vw;
+  background-color: ${props => (props.value && 'blue')}
 
   active {
     background-color: 'red';
@@ -22,13 +18,8 @@ export const Card = styled.div`
   overflow: hidden;
   margin-bottom: 3vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background: ${({ theme }) => theme.card.background};
-  transition: all .2s ease-in-out;
-
-  :hover {
-    transform: scale(1.05);
-  }
 `;
 
 export const Content = styled.div`

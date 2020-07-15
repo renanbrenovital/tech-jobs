@@ -3,12 +3,11 @@ import React from 'react';
 import Image from '../../../components/atoms/Image';
 import Title from '../../../components/atoms/Title';
 import Text from '../../../components/atoms/Text';
-import Button from '../../../components/atoms/Button';
 
 import { Container, Card, Content } from './styles';
-import { DataJob } from '../../../types/types';
+import { DataJobDetails } from '../../../types/types';
 
-const Job = ({ data: { job, index, modalOpen } }: DataJob) => {
+const JobDetails = ({ data: { job, index } }: DataJobDetails) => {
   return (
     <Container>
       <Card>
@@ -16,13 +15,13 @@ const Job = ({ data: { job, index, modalOpen } }: DataJob) => {
         <Content>
           <div>
             <Title level={2}>{job.title}</Title>
-            <Text><small>Company: {job.company.name}</small></Text>
+            <Text>Company: {job.company.name}</Text>
+            <Text>Skills: {job.tags.map(tag => tag.name).join(', ')}</Text>
           </div>
-          <Button onClick={() => modalOpen(job.slug, job.company.slug, index)}>More Details</Button>
         </Content>
       </Card>
     </Container>
   );
 }
 
-export default Job;
+export default JobDetails;

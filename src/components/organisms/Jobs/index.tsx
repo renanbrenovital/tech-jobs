@@ -6,14 +6,17 @@ import Select from '../../atoms/Select';
 import Modal from '../../../components/atoms/Modal';
 import Text from '../../atoms/Text';
 import Job from '../../molecules/Job';
+import JobDetails from '../../molecules/JobDetails';
 
 import { Container, List, Pagination, Buttons, Setting } from './styles';
 import { DataJobs, EventSelectElement } from '../../../types/types';
 
+import api from '../../../services/api';
+
 const Jobs = ({ data: { jobs, loading } }: DataJobs) => 
 {
-  const modalDataInitial = {modalVisible: false, modalClose: () => {}, jobSlug: '', companySlug: ''};
-  const [modalData, setModalData] = useState(modalDataInitial);
+  const functionComponentElement = React.createElement(React.Fragment);
+  const [modalData, setModalData] = useState({modalVisible: false, modalClose: () => {}, modalContent: functionComponentElement});
   
   const [page, setPage] = useState(1);
   const [perPage, setPerPage] = useState(10);
@@ -31,11 +34,32 @@ const Jobs = ({ data: { jobs, loading } }: DataJobs) =>
   }
 
   const modalClose = () => {
-    setModalData(modalDataInitial);
+    setModalData({modalVisible: false, modalClose, modalContent: functionComponentElement});
   }
   
-  const modalOpen = (jobSlug:string, companySlug:string) => {
-    setModalData({modalVisible: true, modalClose, jobSlug, companySlug});
+  const modalOpen = async (jobSlug:string, companySlug:string, index:number) => {    
+    const query = `{
+      job(input:{jobSlug:"${jobSlug}", companySlug:"${companySlug}"}) {
+        slug,
+        title,
+        tags {
+          name
+        },
+        company {
+          name,
+          slug
+        }
+      }
+    }`;
+
+    const response = await api('https://api.graphql.jobs/', query);
+    const { data: { job } } = await response.json();
+    
+    setModalData({
+      modalVisible: true,
+      modalClose,
+      modalContent: <JobDetails data={{ job, index }} />
+    });
   }
 
   return (      
@@ -54,7 +78,7 @@ const Jobs = ({ data: { jobs, loading } }: DataJobs) =>
               />
             )}
           </List>
-          <Pagination>
+          <Pagination id='pagination'>
             <Buttons>
               {pages.map(number => 
                 <Button

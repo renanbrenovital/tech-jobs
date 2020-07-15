@@ -3,7 +3,7 @@ export const lightTheme = {
     text: '#222',
     title: '#FFF',
     primary: '#72D5B4',
-    background: '#F2F2F2',
+    background: '#020100',
     loader: '#020100',
   },
   card: {
@@ -20,7 +20,7 @@ export const lightTheme = {
     }
   },
   pagination: {
-    background: '#FFFFFF95',
+    background: '#FFFFFF99',
   }
 }
 
@@ -29,7 +29,7 @@ export const darkTheme = {
     title: '#FFF',
     text: '#DDD',
     primary: '#02010A',
-    background: '#020100',
+    background: '#DDD',
     loader: '#FFF'
   },
   card: {
@@ -46,6 +46,6 @@ export const darkTheme = {
     }
   },
   pagination: {
-    background: '#02010A95',
+    background: '#02010A99',
   }
 }

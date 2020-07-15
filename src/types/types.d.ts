@@ -2,11 +2,9 @@ export interface Author {
   url: string;
   name: string;
 }
-
 interface TagItem {
   name: string;
 }
-
 interface Job {
   id: string;
   title: string;
@@ -24,7 +22,7 @@ export type Image = {
 
 export type Heading = {
   level: number;
-  children: string;
+  children: any;
 }
 
 export type ThemeState = {
@@ -44,6 +42,13 @@ export type DataJob = {
     job: Job;
     index: number;
     modalOpen: Function;
+  }
+}
+
+export type DataJobDetails = {
+  data: {
+    job: Job;
+    index: number;
   }
 }
 
@@ -67,7 +72,6 @@ export type TypeModal = {
   data: {
     modalVisible: boolean;
     modalClose: Function;
-    jobSlug: string;
-    companySlug: string;
+    modalContent: React.FunctionComponentElement<{}>;
   }
 }
