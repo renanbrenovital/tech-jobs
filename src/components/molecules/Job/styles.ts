@@ -3,9 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.li`
   display: flex;
   width: 220px;
-  background-color: ${props => (props.value && 'blue')};
 
-  @media(max-width: 400px) {
+  @media(max-width: 600px) {
     width: 80vw;
     margin: 3vh 0;
   }

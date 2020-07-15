@@ -42,12 +42,18 @@ const Jobs = ({ data: { jobs, loading } }: DataJobs) =>
       job(input:{jobSlug:"${jobSlug}", companySlug:"${companySlug}"}) {
         slug,
         title,
+        description,
+        locationNames,
         tags {
           name
         },
+        commitment {
+          title
+        },
         company {
           name,
-          slug
+          slug,
+          websiteUrl
         }
       }
     }`;

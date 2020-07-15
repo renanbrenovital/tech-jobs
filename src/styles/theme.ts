@@ -3,7 +3,7 @@ export const lightTheme = {
     text: '#222',
     title: '#FFF',
     primary: '#72D5B4',
-    background: '#020100',
+    background: '#DDD',
     loader: '#020100',
   },
   card: {
@@ -29,7 +29,7 @@ export const darkTheme = {
     title: '#FFF',
     text: '#DDD',
     primary: '#02010A',
-    background: '#DDD',
+    background: '#020100',
     loader: '#FFF'
   },
   card: {

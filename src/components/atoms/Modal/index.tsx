@@ -8,7 +8,7 @@ import { TypeModal } from '../../../types/types';
 export default ({ data: { modalVisible, modalClose, modalContent} }: TypeModal) =>   
 (
   <Modal className={modalVisible ? 'fade-in' : 'fade-out'}>
-    <Button onClick={() => modalClose()}>X</Button>
-    {modalContent}
+      <Button onClick={() => modalClose()}>X</Button>
+      {modalContent}
   </Modal>
 );

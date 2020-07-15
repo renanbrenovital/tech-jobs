@@ -18,7 +18,7 @@ const Job = ({ data: { job, index, modalOpen } }: DataJob) => {
             <Title level={2}>{job.title}</Title>
             <Text><small>Company: {job.company.name}</small></Text>
           </div>
-          <Button onClick={() => modalOpen(job.slug, job.company.slug, index)}>More Details</Button>
+          <Button onClick={() => modalOpen(job.slug, job.company.slug, index)}>Job Details</Button>
         </Content>
       </Card>
     </Container>

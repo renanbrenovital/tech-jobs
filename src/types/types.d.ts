@@ -8,12 +8,18 @@ interface TagItem {
 interface Job {
   id: string;
   title: string;
+  description: string;
   tags: TagItem[];
   slug: string;
+  locationNames: string;
+  commitment: {
+    title: string;
+  };
   company: {
     name: string;
     slug: string;
-  }
+    websiteUrl: string;
+  };
 }
 
 export type Image = {
@@ -60,6 +66,10 @@ export type TypeButton = {
   children: any;
   onClick: Function;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+export type TypeInput = {
+  onChange: Function;
+} & React.InputHTMLAttributes<HTMLInputElement>;
 
 export type EventSelectElement = React.FormEvent<HTMLSelectElement>;
 

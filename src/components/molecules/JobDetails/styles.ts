@@ -1,14 +1,9 @@
 import styled from 'styled-components';
 
-export const Container = styled.li`
+export const Container = styled.div`
   display: flex;
   justify-content: center;
-  width: 100vw;
-  background-color: ${props => (props.value && 'blue')}
-
-  active {
-    background-color: 'red';
-  }
+  width: 90vw;
 `;
 
 export const Card = styled.div`
@@ -20,6 +15,10 @@ export const Card = styled.div`
   display: flex;
   flex-direction: row;
   background: ${({ theme }) => theme.card.background};
+  
+  @media(max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 export const Content = styled.div`
@@ -29,4 +28,35 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  > button {
+    margin-top: 3vh;
+  }
+
+  a {
+    color: ${({ theme }) => theme.card.title};
+  }
+`;
+
+export const Form = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding: 1vw;
+  margin-top: 3vh;
+
+  > button {
+    width: 20%;
+  }
+
+  > input {
+    width: 40%;
+  }
+
+  > input[type="text"], > button {
+    text-transform: capitalize;
+  }
+
+  > input[type="email"], > button {
+    margin-left: 1vw;
+  }
 `;

@@ -26,9 +26,11 @@ export const Modal = styled.div`
 
   > button {
     position: absolute;
-    top: 5vw;
+    top: 5vh;
     right: 5vw;
     display: flex;
+    align-self: flex-start;
+    justify-self: flex-start;
     justify-content: center;
     align-items: center;
     width: 3vw;
