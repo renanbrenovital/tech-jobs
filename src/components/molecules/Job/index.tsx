@@ -8,8 +8,7 @@ import Button from '../../../components/atoms/Button';
 import { Container, Card, Content } from './styles';
 import { DataJob } from '../../../types/types';
 
-const Job = ({ data }: DataJob) => {
-  const { job, index } = data;
+const Job = ({ data: { job, index, modalOpen } }: DataJob) => {
   return (
     <Container>
       <Card>
@@ -19,8 +18,7 @@ const Job = ({ data }: DataJob) => {
             <Title level={2}>{job.title}</Title>
             <Text><small>Company: {job.company.name}</small></Text>
           </div>
-          {/* <Text>{job.tags.map(tag => tag.name).join(', ')}</Text> */}
-          <Button onClick={() => {}}>Read More</Button>
+          <Button onClick={() => modalOpen(job.slug, job.company.slug)}>More Details</Button>
         </Content>
       </Card>
     </Container>

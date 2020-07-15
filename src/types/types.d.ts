@@ -11,8 +11,10 @@ interface Job {
   id: string;
   title: string;
   tags: TagItem[];
+  slug: string;
   company: {
     name: string;
+    slug: string;
   }
 }
 
@@ -41,6 +43,7 @@ export type DataJob = {
   data: {
     job: Job;
     index: number;
+    modalOpen: Function;
   }
 }
 
@@ -52,3 +55,19 @@ export type TypeButton = {
   children: any;
   onClick: Function;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+export type EventSelectElement = React.FormEvent<HTMLSelectElement>;
+
+export type TypeSelect = {
+  children: any;
+  onChange: Function;
+} & React.SelectHTMLAttributes<HTMLSelectElement>;
+
+export type TypeModal = {
+  data: {
+    modalVisible: boolean;
+    modalClose: Function;
+    jobSlug: string;
+    companySlug: string;
+  }
+}

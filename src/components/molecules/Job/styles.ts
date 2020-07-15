@@ -3,6 +3,11 @@ import styled from 'styled-components';
 export const Container = styled.li`
   display: flex;
   width: 220px;
+  background-color: ${props => (props.value && 'blue')}
+
+  active {
+    background-color: 'red';
+  }
 `;
 
 export const Card = styled.div`

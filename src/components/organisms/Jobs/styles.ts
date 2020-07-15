@@ -26,17 +26,28 @@ export const Pagination = styled.div`
   left: 0;
   background: ${({ theme }) => theme.pagination.background};
   width: 100vw;
-  padding: 0 5vw;
+  padding: 0.5vw 5vw;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+`;
 
+export const Buttons = styled.div`
+  display: flex;
+  
   > button {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 1vw;
     height: 1vw;
+    margin-right: 1vw;
   }
+`;
+
+export const Setting = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `;
