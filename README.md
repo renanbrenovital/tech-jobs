@@ -1,11 +1,13 @@
 <h1 align="center">
-  <img src="src/assets/logo-black.png" width="400px" title="Tech Jobs" />
+  <img src="src/assets/logo-black.png" width="400px" title="Tech Jobs Logo" />
 </h1>
 
-<img src="src/assets/techjobs.gif" width="400px" title="Tech Jobs" />
+<h2 align="center">
+  <img src="src/assets/techjobs.gif" width="400px" title="Tech Jobs Gif" />
+</h2>
 
 <h3 align="center">
-  [Acessar Demonstração](https://relaxed-goldwasser-ca6450.netlify.app/)
+  <a href="https://relaxed-goldwasser-ca6450.netlify.app/">Acessar Demonstração</a>
 </h3>
 
 ## Sobre o projeto
