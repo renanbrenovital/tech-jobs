@@ -7,7 +7,7 @@
 </h2>
 
 <h3 align="center">
-  <a href="techjobsreact.netlify.app">Acessar Demonstração</a>
+  <a href="https://techjobsreact.netlify.app/">Acessar Demonstração</a>
 </h3>
 
 ## Sobre o projeto
