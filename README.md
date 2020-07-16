@@ -1,10 +1,11 @@
 <h1 align="center">
   <img src="src/assets/logo-black.png" width="400px" title="Tech Jobs" />
+  <img src="src/assets/techjobs.gif" width="400px" title="Tech Jobs" />
 </h1>
 
-<h2 align="center">
+<h3 align="center">
   Acessar Demonstração
-</h2>
+</h3>
 
 ## Sobre o projeto
 **Tech Jobs** é uma aplicação web desenvolvida com **ReactJS + Typescript** que consome os dados de uma [**API GraphQL**](https://api.graphql.jobs/). 
