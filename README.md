@@ -7,7 +7,7 @@
 </h2>
 
 <h3 align="center">
-  <a href="https://relaxed-goldwasser-ca6450.netlify.app/">Acessar Demonstração</a>
+  <a href="techjobsreact.netlify.app">Acessar Demonstração</a>
 </h3>
 
 ## Sobre o projeto
