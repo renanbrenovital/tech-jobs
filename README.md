@@ -3,7 +3,7 @@
 </h1>
 
 <h2 align="center">
-  <img src="src/assets/techjobs.gif" width="400px" title="Tech Jobs Gif" />
+  <img src="src/assets/techjobs.gif" title="Tech Jobs Gif" />
 </h2>
 
 <h3 align="center">
