@@ -39,6 +39,24 @@ export const Pagination = styled.div`
   justify-content: space-between;
 `;
 
+export const Options = styled.div`
+  max-width: 50vw;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+
+  @media(max-width: 600px) {
+    display: flex;
+  }
+`;
+
+export const Setting = styled.div`
+  max-width: 50vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
 export const Buttons = styled.div`
   display: flex;
   
@@ -50,10 +68,13 @@ export const Buttons = styled.div`
     height: 1vw;
     margin-right: 1vw;
   }
+
+  > button.active {
+    background-color: ${({ theme }) => theme.button.hover.background};
+  }
+
+  @media(max-width: 600px) {
+    display: none;
+  }
 `;
 
-export const Setting = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`;

@@ -1,18 +1,13 @@
 import React from 'react';
 import { Input, Label } from './styles';
-import AppContext from '../../../context/themeContext';
+import { TypeThemeSwitcher } from '../../../types/types';
 
-const ThemeSwitcher = () => {
+const ThemeSwitcher = ({ data: { theme, toggle }}: TypeThemeSwitcher) => {
   return (
-    <AppContext.Consumer>
-      {value => (
-        <> 
-          <Input id="switch" type="checkbox" onChange={() => value.toggle()} checked={value.theme === 'dark'} />
-          <Label htmlFor="switch" />
-        </>
-      )
-      }
-    </AppContext.Consumer>
+    <> 
+      <Input id="switch" type="checkbox" onChange={() => toggle()} checked={theme === 'dark'} />
+      <Label htmlFor="switch" />
+    </>
   );
 };
 

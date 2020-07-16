@@ -1,16 +1,23 @@
 import React from 'react';
 
-import Title from '../../atoms/Title';
+import AppContext from '../../../context/themeContext';
+
 import ThemeSwitcher from '../../atoms/ThemeSwitcher';
+import logoWhite from '../../../assets/logo-white.png';
+import logoBlack from '../../../assets/logo-black.png';
 
 import { Container } from './styles';
 
-const Header = () => {
+const Header = () => {  
   return (
-    <Container>
-      <Title level={1}>Tech Jobs</Title>
-      <ThemeSwitcher />
-    </Container>
+    <AppContext.Consumer>
+    {value => 
+      <Container>
+        <img src={value.theme === 'dark' ? logoWhite : logoBlack} alt="logo" width={150} />
+        <ThemeSwitcher data={{theme: value.theme, toggle: value.toggle}} />
+      </Container>
+    }
+  </AppContext.Consumer>
   );
 }
 

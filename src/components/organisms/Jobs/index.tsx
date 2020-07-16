@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 
 import Loader from '../../atoms/Loader';
 import Button from '../../atoms/Button';
@@ -8,7 +8,7 @@ import Text from '../../atoms/Text';
 import Job from '../../molecules/Job';
 import JobDetails from '../../molecules/JobDetails';
 
-import { Container, List, Pagination, Buttons, Setting } from './styles';
+import { Container, List, Pagination, Options, Buttons, Setting } from './styles';
 import { DataJobs, EventSelectElement } from '../../../types/types';
 
 import api from '../../../services/api';
@@ -28,10 +28,14 @@ const Jobs = ({ data: { jobs, loading } }: DataJobs) =>
   const totalPages = Math.round(jobs.length / perPage);
   const pages = Array(totalPages).fill(0).map((_,i) => i + 1);
 
-  const jobsPerPage = (event: EventSelectElement) => {
+  const selectPage = useCallback((event: EventSelectElement) => {
+    setPage(Number(event.currentTarget.value));
+  }, [setPage]);
+  
+  const jobsPerPage = useCallback((event: EventSelectElement) => {
     setPerPage(Number(event.currentTarget.value));
     setPage(1);
-  }
+  }, [setPage, setPerPage]);
 
   const modalClose = () => {
     setModalData({modalVisible: false, modalClose, modalContent: functionComponentElement});
@@ -85,6 +89,19 @@ const Jobs = ({ data: { jobs, loading } }: DataJobs) =>
             )}
           </List>
           <Pagination id='pagination'>
+            <Options>
+              <Text>Select page:</Text>
+              <Select onChange={selectPage} defaultValue={page}>
+                {pages.map(number => 
+                  <option
+                    key={number}
+                    value={number}
+                  >
+                    {number}
+                  </option>
+                )}
+              </Select>
+            </Options>
             <Buttons>
               {pages.map(number => 
                 <Button
@@ -97,7 +114,7 @@ const Jobs = ({ data: { jobs, loading } }: DataJobs) =>
               )}
             </Buttons>
             <Setting>
-              <Text>Jobs per page:</Text>
+              <Text>Per page:</Text>
               <Select onChange={jobsPerPage} defaultValue={perPage}>
                 {[5,10,15,20].map(option => 
                   <option

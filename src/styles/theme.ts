@@ -5,6 +5,8 @@ export const lightTheme = {
     primary: '#72D5B4',
     background: '#DDD',
     loader: '#020100',
+    success: '#28502E',
+    error: '#AF1B3F'
   },
   card: {
     title: '#02010A',
@@ -30,7 +32,9 @@ export const darkTheme = {
     text: '#DDD',
     primary: '#02010A',
     background: '#020100',
-    loader: '#FFF'
+    loader: '#FFF',
+    success: '#28502E',
+    error: '#AF1B3F'
   },
   card: {
     title: '#72D5B4',

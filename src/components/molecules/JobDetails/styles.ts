@@ -36,6 +36,16 @@ export const Content = styled.div`
   a {
     color: ${({ theme }) => theme.card.title};
   }
+
+  p.error {
+    color: ${({ theme }) => theme.colors.error};
+    font-weight: bold;
+  }
+
+  p.success {
+    color: ${({ theme }) => theme.colors.success};
+    font-weight: bold;
+  }
 `;
 
 export const Form = styled.div`
@@ -59,4 +69,18 @@ export const Form = styled.div`
   > input[type="email"], > button {
     margin-left: 1vw;
   }
+
+  @media(max-width: 600px) {
+    flex-direction: column;
+
+    > button, > input {
+      width: 100%;
+    }
+
+    > input[type="email"], > button {
+      margin-left: 0;
+      margin-top: 1vh;
+    }
+  }
+
 `;

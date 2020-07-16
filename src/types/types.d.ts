@@ -62,6 +62,11 @@ export type Children = {
   children: any;
 }
 
+export type TypeText = {
+  children: any;
+  className?: any;
+} & React.ParamHTMLAttributes<HTMLParagraphElement>;
+
 export type TypeButton = {
   children: any;
   onClick: Function;
@@ -83,5 +88,12 @@ export type TypeModal = {
     modalVisible: boolean;
     modalClose: Function;
     modalContent: React.FunctionComponentElement<{}>;
+  }
+}
+
+type TypeThemeSwitcher = {
+  data: {
+    theme: String;
+    toggle: Function;
   }
 }

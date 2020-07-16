@@ -37,4 +37,8 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  p.company {
+    margin: 3vh 0;
+  }
 `;

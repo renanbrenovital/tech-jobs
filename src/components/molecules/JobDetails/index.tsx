@@ -55,7 +55,7 @@ const JobDetails = ({ data: { job, index } }: DataJobDetails) => {
       <Card>
           <Image src={`https://picsum.photos/500/300/?image=${index+1}`} />
           <Content>
-            <Title level={2}>{job.title}</Title>
+            <Title level={1}>{job.title}</Title>
             {job.locationNames && <Text><b>Location:</b> {job.locationNames}</Text>}
             <Text>
               <b>Company: </b> 
@@ -70,9 +70,9 @@ const JobDetails = ({ data: { job, index } }: DataJobDetails) => {
             <Text><b>Skills:</b> {job.tags.map(tag => tag.name).join(', ')}</Text>
             <Text><b>Time:</b> {job.commitment.title}</Text>
             <Text><b>Description:</b> {job.description.slice(0, 200)} . . .</Text>
-            {error !== '' && <Text>{error}</Text>}
+            {error !== '' && <Text className="error">{error}</Text>}
             {loading ? <Loader /> : 
-              subscribe ? <Text>Your application was successful!</Text>
+              subscribe ? <Text className="success">Your application was successful!</Text>
                 :
                 <Form>
                   <Input name="name" type="text" onChange={e => setName(e.target.value)} />

@@ -4,7 +4,7 @@ import Text from '../../atoms/Text';
 
 const Copyright = () => {
   return (
-    <Text>Created by <Author url="https://github.com/renanbrenovital" name="Renan Vital" /></Text>
+    <Text>Created by <Author url="https://github.com/renanbrenovital/tech-jobs" name="Renan Vital" /></Text>
   );
 }
 
